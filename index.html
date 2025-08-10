@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="cursor-light" id="cursorLight"></div>
+  
+    <div class="background-container">
+      <header class="header">
+        <div class="nav-title"></div>
+        <nav class="nav-bar-desktop">
+          <a class="nav-link" href="#">ABOUT</a>
+          <a class="nav-link" href="#">PROJECTS</a>
+          <a class="nav-link" href="#">RESUME</a>
+        </nav>
+      </header>
+  
+
+      <img class="gradient-img" src="/gradient.png" alt="Gradient-img" />
+      <div class="blur-box"></div>
+  
+
+      <div class="geometric-shape large-triangle triangle-1"></div>
+      <div class="geometric-shape large-triangle triangle-3"></div>
+      <div class="geometric-shape large-triangle triangle-5"></div>
+      <div class="geometric-shape large-triangle triangle-8"></div>
+      <div class="geometric-shape large-triangle triangle-9"></div>
+      <div class="geometric-shape large-triangle triangle-10"></div>
+      <div class="geometric-shape polygon-complex polygon-1"></div>
+      <div class="geometric-shape polygon-complex polygon-2"></div>
+    </div>
+  
+    <div id="tsparticles"></div>
+  
+    <main class="main-container">
+      <div class="top-section">
+        <div class="content-wrapper">
+          <h1 class="main-heading" id="typewriter"></h1>
+          <p class="description">
+        A web developer passionate about crafting responsive, high-performance web apps with clean, maintainable code.
+          </p>
+          <br>
+          <div class="gradient-border">
+            <div class="inner-box">
+              <i class="bx bx-diamond"></i> PROJECTS
+            </div>
+          </div>
+        </div>
+  
+        <canvas id="canvas3d"></canvas>
+    </div>
+    <div class="view-controller">
+      <div class="glass-container">
+        <div>
+            <h1>Projects</h1>
+            <p>Projects I’ve designed and built.</p>
+        </div>
+      </div>
+      <div class="glass-container">
+        <div class="glass-item">
+          <h1 class="project-title">Project 1 </h1>
+          <img src="images/ima1.avif" alt="Portfolio Screenshot" class="project-image">
+      
+          <p class="project-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent efficitur erat ut leo venenatis, at luctus nibh tincidunt. 
+          </p>
+      
+          <a href="https://github.com/yourusername/portfolio" target="_blank" class="github-link">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+          </a>
+          <a href="https://github.com/yourusername/chatapp" target="_blank" class="github-link">See It Live
+        </a>
+      
+          <div class="tech-stack">
+
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+          
+          </div>
+        </div>
+      
+        <div class="glass-item">
+          <h3 class="project-title">Project 2</h3>
+          <img src="images/ima2.jpg" alt="Chat App Screenshot" class="project-image">
+      
+          <p class="project-description">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent efficitur erat ut leo venenatis, at luctus nibh tincidunt. 
+          </p>
+      
+          <a href="https://github.com/yourusername/chatapp" target="_blank" class="github-link">See It Live
+          </a>
+      
+          <div class="tech-stack">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain.svg" />
+          
+
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" />
+
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-plain.svg" />
+          
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/socketio/socketio-original.svg" />
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+
+
+    <section class="stats-section">
+        <svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" width="400"  class="wavy-blob">
+          <path fill="#0d1118">
+            <animate attributeName="d"
+              dur="8s"
+              repeatCount="indefinite"
+              values="
+                M75,150 Q65,70,150,50 Q280,0,360,40 Q450,90,430,180 Q420,260,320,260 Q220,280,140,240 Q80,210,75,150Z;
+                M85,140 Q75,50,160,40 Q280,-10,350,50 Q440,100,420,190 Q410,270,310,250 Q210,270,130,230 Q70,200,85,140Z;
+                M65,160 Q55,90,140,60 Q270,10,370,50 Q460,110,440,200 Q430,280,320,270 Q210,290,150,250 Q90,220,65,160Z;
+                M75,150 Q65,70,150,50 Q280,0,360,40 Q450,90,430,180 Q420,260,320,260 Q220,280,140,240 Q80,210,75,150Z
+              " />
+          </path>
+      
+          <!-- Add id so JS can target -->
+          <text id="count-leetcode" x="50%" y="45%" text-anchor="middle" fill="white" font-size="48" font-weight="bold">
+            0+
+          </text>
+          <text x="50%" y="65%" text-anchor="middle" fill="white" font-size="28" font-family="monospace">
+            Leetcode Problems solved 
+          </text>
+        </svg>
+
+
+
+        <svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" width="400"  class="wavy-blob">
+            <path fill="#0d1118">
+              <animate attributeName="d"
+                dur="8s"
+                repeatCount="indefinite"
+                values="
+                  M75,150 Q65,70,150,50 Q280,0,360,40 Q450,90,430,180 Q420,260,320,260 Q220,280,140,240 Q80,210,75,150Z;
+                  M85,140 Q75,50,160,40 Q280,-10,350,50 Q440,100,420,190 Q410,270,310,250 Q210,270,130,230 Q70,200,85,140Z;
+                  M65,160 Q55,90,140,60 Q270,10,370,50 Q460,110,440,200 Q430,280,320,270 Q210,290,150,250 Q90,220,65,160Z;
+                  M75,150 Q65,70,150,50 Q280,0,360,40 Q450,90,430,180 Q420,260,320,260 Q220,280,140,240 Q80,210,75,150Z
+                " />
+            </path>
+        
+            <!-- Add id so JS can target -->
+            <text id="count-hackathons" x="50%" y="45%" text-anchor="middle" fill="white" font-size="48" font-weight="bold">
+              0
+            </text>
+            <text x="50%" y="65%" text-anchor="middle" fill="white" font-size="28" font-family="monospace">
+              Hackathons attended
+            </text>
+          </svg>
+
+      </section>
+        
+      
+      
+    </main>
+  
+    <script type="module" src="script.js"></script>
+  </body>
+  
+</html>

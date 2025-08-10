@@ -1,0 +1,495 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Space Mono', monospace;
+
+
+    background: #00040c;
+    color: #ffffff;
+    overflow-x: hidden;
+    min-height: 100vh;
+    cursor: none;
+}
+h1, h2, .terminal-text, .typewriter {
+font-family: 'Space Mono', monospace;
+}
+
+
+.background-container {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.geometric-shape {
+    position: absolute;
+    opacity: 0.08;
+    transition: all 0.3s ease;
+}
+
+.large-triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    filter: blur(0.5px);
+}
+
+.triangle-1 {
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 260px solid #1a202c;
+    top: -50px;
+    left: -50px;
+    animation: slowFloat 9s infinite ease-in-out;
+}
+
+.triangle-2 {
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+    border-bottom: 346px solid #1a202c;
+    top: -50px;
+    top: 20%;
+    right: -100px;
+    animation: slowFloat 10s infinite ease-in-out reverse;
+}
+
+.triangle-3 {
+    border-left: 120px solid transparent;
+    border-right: 120px solid transparent;
+    border-bottom: 208px solid #1a202c;
+    bottom: -80px;
+    left: 20%;
+    animation: slowFloat 10s infinite ease-in-out;
+    animation-delay: -5s;
+}
+
+.triangle-4 {
+    border-left: 180px solid transparent;
+    border-right: 180px solid transparent;
+    border-bottom: 312px solid #1a202c;
+    bottom: 1%;
+    right: 15%;
+    animation: slowFloat 10s infinite ease-in-out reverse;
+    animation-delay: -5s;
+}
+.triangle-5 {
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 260px solid #1a202c;
+    top: 550px;
+    left: 150px;
+    animation: slowFloat 9s infinite ease-in-out;
+}
+.triangle-6 {
+    border-left: 180px solid transparent;
+    border-right: 180px solid transparent;
+    border-bottom: 312px solid #1a202c;
+    top: 550px;
+    left: 450px;
+    animation: slowFloat 9s infinite ease-in-out;
+}
+.triangle-7 {
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 260px solid #1a202c;
+    top: 50px;
+    left: 1150px;
+    animation: slowFloat 9s infinite ease-in-out;
+}
+.triangle-8 {
+    border-left: 180px solid transparent;
+    border-right: 180px solid transparent;
+    border-top: 312px solid #1a202c;
+    position: absolute;
+    top: 90px;
+    left: 550px;
+    animation: slowFloat 9s infinite ease-in-out;
+}
+
+.triangle-9 {
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 260px solid #1a202c;
+    top: 350px;
+    left: 1150px;
+    animation: slowFloat 9s infinite ease-in-out;
+}
+.triangle-10 {
+    border-left: 120px solid transparent;
+    border-right: 120px solid transparent;
+    border-top: 200px solid #1a202c; /* shortened from 312px to 200px */
+    position: absolute;
+    top: 90px;
+    left: 200px;
+    animation: slowFloat 9s infinite ease-in-out;
+}
+.triangle-10 {
+    border-left: 120px solid transparent;
+    border-right: 120px solid transparent;
+    border-top: 200px solid #1a202c; /* shortened from 312px to 200px */
+    position: absolute;
+    top: 890px;
+    left: 700px;
+    animation: slowFloat 9s infinite ease-in-out;
+}
+.triangle-11 {
+    border-left: 180px solid transparent;
+    border-right: 180px solid transparent;
+    border-bottom: 312px solid #1a202c;
+    top: 550px;
+    left: 1500px;
+    animation: slowFloat 9s infinite ease-in-out;
+}
+
+.triangle-12 {
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 260px solid #1a202c;
+    top: 150px;
+    left: 250px;
+    animation: slowFloat 9s infinite ease-in-out;
+}
+
+
+
+
+.polygon-complex {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+.polygon-1 {
+    width: 200px;
+    height: 200px;
+    top: 30%;
+    left: 10%;
+    animation: slowRotate 20s infinite linear;
+}
+
+.polygon-2 {
+    width: 160px;
+    height: 160px;
+    top: 60%;
+    right: 25%;
+    animation: slowRotate 20s infinite linear reverse;
+}
+
+
+@keyframes slowFloat {
+    0%, 100% {
+        transform: translateY(0px) translateX(0px);
+    }
+    25% {
+        transform: translateY(-10px) translateX(5px);
+    }
+    50% {
+        transform: translateY(-5px) translateX(-3px);
+    }
+    75% {
+        transform: translateY(-15px) translateX(8px);
+    }
+}
+
+@keyframes slowRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+.header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 2rem 4rem; /* top/bottom and left/right spacing */
+margin-top: 1.5rem; /* space from the top of the screen */
+font-family: 'Quicksand', sans-serif;
+}
+
+/* Nav section — only visible on medium screens and up */
+@media (min-width: 768px) {
+.nav-bar-desktop {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+}
+
+.nav-bar-desktop {
+display: flex; /* hidden by default for mobile */
+position: relative;
+z-index: 50;
+}
+
+/* Nav links styling */
+.nav-link {
+font-size: 1rem;
+letter-spacing: 0.05em;
+color: inherit;
+text-decoration: none;
+transition: color 0.3s ease;
+z-index: 50;
+}
+
+.nav-link:hover {
+color: #d1d5db;
+}
+
+/* Title styling */
+.nav-title {
+font-size: 1.5rem;
+font-weight: bold;
+color: #ffffff;
+}
+
+
+
+
+/* Custom Cursor Light Effect */
+.cursor-light {
+    position: fixed;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle,rgba(255, 255, 255, 0.1) 0%, rgba(59, 130, 246, 0.2) 2%, rgba(59, 130, 246, 0.1) 30%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
+}
+
+.cursor-light.hidden {
+    opacity: 0;
+}
+
+/* Enhanced glow effect on shapes when near cursor */
+.geometric-shape.illuminated {
+    opacity: 0.25;
+    filter: brightness(1.5);
+    transition: all 0.5s ease;
+}
+.gradient-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.6;
+    z-index: -10;
+}
+
+.blur-box {
+    height: 0;
+    width: 40rem;
+    position: absolute;
+    top: 20%;
+    right: -5%;
+    box-shadow: 0 0 900px 20px rgba(90, 95, 153, 0.5);
+    transform: rotate(-30deg);
+    z-index: -10;
+}
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* optional */
+    padding: 2rem;
+  }
+  
+
+  #canvas3d {
+    flex: 1;
+    min-width: 400px;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+    display: block; /* prevents inline spacing */
+  }
+  .top-section {
+    min-height: 74vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem; 
+  }
+  
+
+.gradient-border {
+position: relative;
+width: 95%;
+height: 2.5rem; /* h-10 */
+background: linear-gradient(to right, #c8cdd9, #2c42be);
+box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+border-radius: 9999px;
+}
+
+
+.inner-box {
+position: absolute;
+inset: 3px;
+background: black;
+border-radius: 9999px;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 0.25rem; /* gap-1 */
+}
+
+.bx {
+font-family: "boxicons"; /* Make sure Boxicons are included */
+}
+.main-heading {
+    min-height: 5.8rem;
+    font-family: 'Space Mono', monospace;
+    font-size: 2.5rem;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #fff;
+    animation: blinkCursor 0.7s steps(2, start) infinite;
+  }
+  
+  @keyframes blinkCursor {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: #fff; }
+  }
+.content-wrapper {
+    flex: 1;
+    max-width: 700px;
+    margin: 0;
+    padding: 8.1rem;
+  }
+
+.description {
+font-size: 1rem; /* text-base */
+color: #9ca3af; /* text-gray-400 */
+letter-spacing: 0.05em; /* tracking-wider */
+max-width: 25rem;
+}
+.main-heading {
+
+font-weight: bold; 
+font-family: 'Space Mono', monospace; /* or any monospace font */
+font-size: 4rem;
+white-space: nowrap;
+overflow: hidden;
+border-right: 2px solid #fff; /* cursor effect */
+width: fit-content;
+animation: blinkCursor 0.8s steps(2, start) infinite;
+}
+@keyframes blinkCursor {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: #fff; }
+  }
+
+#tsparticles {
+position: absolute;
+width: 100%;
+height: 100%;
+z-index: -1;
+top: 0;
+left: 0;
+}
+.glass-container {
+    display: flex;
+    gap: 7rem; 
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+    transition: all 0.7s ease;
+  }
+  
+.glass-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 1.5rem;
+    text-align: center;
+    color: white;
+    width: 440px;     
+    height: 550px; 
+}
+.glass-item:hover{
+    background:rgba(255, 255, 255, 0.073);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.098);
+    transform:translateY(-1px);
+    cursor: default; 
+}
+.glass-item a{
+    color:white;
+}
+.project-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.6rem;
+  }
+  
+  .project-image {
+    width: 100%;
+    height:130px;
+    object-fit:cover;
+    border-radius: 0.5rem;
+  }
+  
+  .project-description {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .github-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  
+  .github-logo {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .tech-stack {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .tech-stack img {
+    width: 30px;  
+    height: 30px; 
+  }  
+  
+  .tech-logo {
+    width: 24px;
+    height: 24px;
+  }
+
+  .view-controller{
+    min-height:100vh;
+  }
+
+  .stats-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #00040c;
+  }
+
+  .wavy-blob path {
+    transition: filter 0.3s ease;
+  }
+  
+  .wavy-blob path:hover {
+    filter: drop-shadow(0 0 7px rgba(255, 255, 255, 0.159));
+    cursor:default;
+  }
+  
