@@ -7,7 +7,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+  
   <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -18,9 +20,10 @@
       <header class="header">
         <div class="nav-title"></div>
         <nav class="nav-bar-desktop">
-          <a class="nav-link" href="#">ABOUT</a>
-          <a class="nav-link" href="#">PROJECTS</a>
-          <a class="nav-link" href="#">RESUME</a>
+          <a class="nav-link" data-aos="fade-down" data-aos-duration="2000" href="#">ABOUT</a>
+        
+          <a class="nav-link" data-aos="fade-down" data-aos-duration="2500" href="#">PROJECTS</a>
+          <a class="nav-link" data-aos="fade-down" data-aos-duration="3000" href="#">RESUME</a>
         </nav>
       </header>
   
@@ -44,19 +47,37 @@
     <main class="main-container">
       <div class="top-section">
         <div class="content-wrapper">
-          <h1 class="main-heading" id="typewriter"></h1>
-          <p class="description">
+          <h1 class="main-heading" id="typewriter"
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="300"
+        data-aos-offset="0"
+        data-aos-duration="1500" 
+     ></h1>
+          <p 
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="300"
+     data-aos-offset="0"
+     data-aos-duration="2500" 
+          class="description">
         A web developer passionate about crafting responsive, high-performance web apps with clean, maintainable code.
           </p>
           <br>
-          <div class="gradient-border">
+          <div class="gradient-border"
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="300"
+     data-aos-offset="0"
+     data-aos-duration="2000">
             <div class="inner-box">
               <i class="bx bx-diamond"></i> PROJECTS
             </div>
           </div>
         </div>
   
-        <canvas id="canvas3d"></canvas>
+        <canvas id="canvas3d"
+   ></canvas>
     </div>
     <div class="view-controller">
       <div class="glass-container">
@@ -66,60 +87,93 @@
         </div>
       </div>
       <div class="glass-container">
-        <div class="glass-item">
-          <h1 class="project-title">Project 1 </h1>
-          <img src="images/ima1.avif" alt="Portfolio Screenshot" class="project-image">
+        <div class="glass-item"
+        data-aos="fade-up"
+        data-aos-duration="1500" >
+          <h1 class="project-title">Post, connect, and join the vibe. </h1>
+          <img src="images/proj1.png" alt="Portfolio Screenshot" class="project-image">
       
           <p class="project-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent efficitur erat ut leo venenatis, at luctus nibh tincidunt. 
+            A social app where you can create an account, chat with friends, share posts, and join or build communities that interest you. 
           </p>
       
-          <a href="https://github.com/yourusername/portfolio" target="_blank" class="github-link">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
-          </a>
-          <a href="https://github.com/yourusername/chatapp" target="_blank" class="github-link">See It Live
+
+          <a href="https://social-media2-xi.vercel.app/" target="_blank" class="github-link">See It Live
         </a>
       
           <div class="tech-stack">
 
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain.svg" />
+            
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg" />
+
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-plain.svg" />
+          
+          
+          
+          </div>
+        </div>
+      
+        <div class="glass-item"
+        data-aos="fade-up"
+        data-aos-duration="2200">
+          <h3 class="project-title">Researcher Website –Freelance Project</h3>
+          <img src="images/proj2.png" alt="Chat App Screenshot" class="project-image">
+      
+          <p class="project-description">
+            A personal website designed for a researcher to showcase their work, publications, blogs, and writings — providing a platform to share insights, highlight achievements, and connect with a wider audience.
+          </p>
+      
+          <a href="https://next-sanity-2brg.vercel.app/" target="_blank" class="github-link">See It Live
+          </a>
+      
+          <div class="tech-stack">
+            
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
+
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sanity/sanity-original.svg" />
+          
+
+
+          </div>
+        </div>
+        <div class="glass-item"
+        data-aos="fade-up"
+        data-aos-duration="3000" >
+          <h3 class="project-title">Talk. Draw. Connect.</h3>
+          <img src="images/proj3.png" alt="Chat App Screenshot" class="project-image">
+      
+          <p class="project-description">
+            An interactive app where you can join rooms, chat with others, and draw together in real time.
+          </p>
+      
+          <a href="https://audio-rooms.vercel.app/" target="_blank" class="github-link">See It Live
+          </a>
+      
+          <div class="tech-stack">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain.svg" />
+          
+          
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+          
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
           
           </div>
         </div>
-      
-        <div class="glass-item">
-          <h3 class="project-title">Project 2</h3>
-          <img src="images/ima2.jpg" alt="Chat App Screenshot" class="project-image">
-      
-          <p class="project-description">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent efficitur erat ut leo venenatis, at luctus nibh tincidunt. 
-          </p>
-      
-          <a href="https://github.com/yourusername/chatapp" target="_blank" class="github-link">See It Live
-          </a>
-      
-          <div class="tech-stack">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain.svg" />
-          
 
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" />
-
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-plain.svg" />
-          
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/socketio/socketio-original.svg" />
-          </div>
-        </div>
-        
-      </div>
     </div>
+    
 
 
 
-    <section class="stats-section">
+    <section class="stats-section"
+    data-aos="fade-up"
+    data-aos-duration="2500">
         <svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg" width="400"  class="wavy-blob">
           <path fill="#0d1118">
             <animate attributeName="d"
@@ -133,7 +187,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent efficitur erat
               " />
           </path>
       
-          <!-- Add id so JS can target -->
+          <!-- Add id so JS can target https://social-media2-xi.vercel.app/-->
           <text id="count-leetcode" x="50%" y="45%" text-anchor="middle" fill="white" font-size="48" font-weight="bold">
             0+
           </text>
@@ -173,6 +227,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent efficitur erat
     </main>
   
     <script type="module" src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
   
 </html>

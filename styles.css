@@ -214,12 +214,12 @@ font-family: 'Space Mono', monospace;
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding: 2rem 4rem; /* top/bottom and left/right spacing */
-margin-top: 1.5rem; /* space from the top of the screen */
+padding: 2rem 4rem; 
+margin-top: 1.5rem; 
 font-family: 'Quicksand', sans-serif;
 }
 
-/* Nav section — only visible on medium screens and up */
+
 @media (min-width: 768px) {
 .nav-bar-desktop {
     display: flex;
@@ -229,12 +229,12 @@ font-family: 'Quicksand', sans-serif;
 }
 
 .nav-bar-desktop {
-display: flex; /* hidden by default for mobile */
+display: flex; 
 position: relative;
 z-index: 50;
 }
 
-/* Nav links styling */
+
 .nav-link {
 font-size: 1rem;
 letter-spacing: 0.05em;
@@ -248,7 +248,7 @@ z-index: 50;
 color: #d1d5db;
 }
 
-/* Title styling */
+
 .nav-title {
 font-size: 1.5rem;
 font-weight: bold;
@@ -258,7 +258,7 @@ color: #ffffff;
 
 
 
-/* Custom Cursor Light Effect */
+
 .cursor-light {
     position: fixed;
     width: 150px;
@@ -275,7 +275,6 @@ color: #ffffff;
     opacity: 0;
 }
 
-/* Enhanced glow effect on shapes when near cursor */
 .geometric-shape.illuminated {
     opacity: 0.25;
     filter: brightness(1.5);
@@ -302,7 +301,7 @@ color: #ffffff;
 .main-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* optional */
+    align-items: center; 
     padding: 2rem;
   }
   
@@ -313,7 +312,7 @@ color: #ffffff;
     height: 400px;
     margin: 0;
     padding: 0;
-    display: block; /* prevents inline spacing */
+    display: block; 
   }
   .top-section {
     min-height: 74vh;
@@ -371,19 +370,19 @@ font-family: "boxicons"; /* Make sure Boxicons are included */
   }
 
 .description {
-font-size: 1rem; /* text-base */
-color: #9ca3af; /* text-gray-400 */
-letter-spacing: 0.05em; /* tracking-wider */
+font-size: 1rem; 
+color: #9ca3af; 
+letter-spacing: 0.05em; 
 max-width: 25rem;
 }
 .main-heading {
 
 font-weight: bold; 
-font-family: 'Space Mono', monospace; /* or any monospace font */
+font-family: 'Space Mono', monospace; 
 font-size: 4rem;
 white-space: nowrap;
 overflow: hidden;
-border-right: 2px solid #fff; /* cursor effect */
+border-right: 2px solid #fff; 
 width: fit-content;
 animation: blinkCursor 0.8s steps(2, start) infinite;
 }
@@ -402,14 +401,15 @@ left: 0;
 }
 .glass-container {
     display: flex;
+    flex-wrap: wrap;  
     gap: 7rem; 
-    align-items: center;
+    align-items: flex-start; 
     justify-content: center;
     margin-top: 4rem;
     transition: all 0.7s ease;
   }
   
-.glass-item {
+  .glass-item {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -419,9 +419,15 @@ left: 0;
     padding: 1.5rem;
     text-align: center;
     color: white;
-    width: 440px;     
+  
+    width: 440px;       
     height: 550px; 
-}
+    box-sizing: border-box;
+  
+    flex: 0 0 440px;  
+  }
+  
+  
 .glass-item:hover{
     background:rgba(255, 255, 255, 0.073);
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.098);
@@ -438,7 +444,7 @@ left: 0;
   
   .project-image {
     width: 100%;
-    height:130px;
+    height:170px;
     object-fit:cover;
     border-radius: 0.5rem;
   }
