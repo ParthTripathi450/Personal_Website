@@ -115,30 +115,22 @@ font-family: 'Space Mono', monospace;
 }
 
 .triangle-9 {
-    border-left: 150px solid transparent;
-    border-right: 150px solid transparent;
-    border-bottom: 260px solid #1a202c;
-    top: 350px;
-    left: 1150px;
-    animation: slowFloat 9s infinite ease-in-out;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 260px solid #1a202c;
+  top: 350px;
+  left: 750px;
+  animation: slowFloat 9s infinite ease-in-out;
 }
+
 .triangle-10 {
-    border-left: 120px solid transparent;
-    border-right: 120px solid transparent;
-    border-top: 200px solid #1a202c; /* shortened from 312px to 200px */
-    position: absolute;
-    top: 90px;
-    left: 200px;
-    animation: slowFloat 9s infinite ease-in-out;
-}
-.triangle-10 {
-    border-left: 120px solid transparent;
-    border-right: 120px solid transparent;
-    border-top: 200px solid #1a202c; /* shortened from 312px to 200px */
-    position: absolute;
-    top: 890px;
-    left: 700px;
-    animation: slowFloat 9s infinite ease-in-out;
+  border-left: 120px solid transparent;
+  border-right: 120px solid transparent;
+  border-top: 200px solid #1a202c; /* shortened from 312px to 200px */
+  position: absolute;
+  top: 890px;
+  left: 700px;
+  animation: slowFloat 9s infinite ease-in-out;
 }
 .triangle-11 {
     border-left: 180px solid transparent;
@@ -219,33 +211,39 @@ margin-top: 1.5rem;
 font-family: 'Quicksand', sans-serif;
 }
 
-
-@media (min-width: 768px) {
 .nav-bar-desktop {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-}
-}
-
-.nav-bar-desktop {
+  color:#c0c0c0; 
 display: flex; 
 position: relative;
+align-items: center;
 z-index: 50;
+align-items: center;
+gap: 3rem;
+
 }
 
-
+/* Optional: Add subtle underline glow effect */
 .nav-link {
-font-size: 1rem;
-letter-spacing: 0.05em;
-color: inherit;
-text-decoration: none;
-transition: color 0.3s ease;
-z-index: 50;
+  position: relative;
+  display: inline-block; /* allows transform scaling */
+  letter-spacing: 0.05em;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease; /* smooth in and out */
+  z-index: 50;
+  cursor: none;
+}
+.nav-link span {
+  display: inline-block;
+  letter-spacing: 0.05em;
+  color: inherit;
+  transition: all 0.3s ease; /* smooth scaling + color + shadow */
 }
 
-.nav-link:hover {
-color: #d1d5db;
+.nav-link:hover span {
+  transform: scale(1.015);
+  color: #d1d5db;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
 }
 
 
@@ -488,6 +486,7 @@ left: 0;
     justify-content: center;
     align-items: center;
     background: #00040c;
+    padding: 140px;
   }
 
   .wavy-blob path {
